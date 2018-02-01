@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">	
+    <head>
+		<meta charset="UTF-8">
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- For Resposive Device -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>Security Questions</title>
+        <link rel="stylesheet" type="text/css" href="css/style1.css">
+        <script type="text/javascript" src="vendor/jquery.2.2.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/v.js"></script>
+    </head>
+    <body>
+        <div class="div-label-span div-margin-bottom-5px">
+            <h2>Answer your security qustions</h2>
+        </div>
+        <div id="form-container">
+            <form id="form-findaccount" action="findaccount.php" method="POST">
+                <div>
+                    <div class="div-margin-bottom-5px">
+                        <div class="div-label-span div-margin-bottom-5px">
+                            <span>What is Q1?</span>
+                        </div>
+                        <div style="background-color:#fff;border:1px solid #ddd;overflow:auto;border-radius: 5px;">
+                            <span id="div-icon" class="div-icon">
+                            </span>
+                            <input id="txtQ1" type="text" name="q1" data-id="1" class="txt" placeholder="Anwer one" autocomplete="off" oninput="ValidateTextMissing(this)" oninvalid="ValidateTextMissing(this)" required />
+                            <span id="span-error-msgq1" class="span-error-msg"></span>
+                            <span id="span-warning-msg" class="span-warning-msg"></span>
+                        </div>
+                    </div>
+                    <div class="div-margin-bottom-5px">
+                            <div class="div-label-span div-margin-bottom-5px">
+                                <span>What is Q2?</span>
+                            </div>
+                            <div style="background-color:#fff;border:1px solid #ddd;overflow:auto;border-radius: 5px;">
+                                <span id="div-icon" class="div-icon">
+                                </span>
+                                <input id="txtQ2" type="text" name="q1" data-id="2" class="txt" placeholder="Anwer two" autocomplete="off" oninput="ValidateTextMissing(this)" oninvalid="ValidateTextMissing(this)" required />
+                                <span id="span-error-msgq2" class="span-error-msg"></span>
+                                <span id="span-warning-msg" class="span-warning-msg"></span>
+                            </div>
+                        </div>
+                        <div class="div-margin-bottom-5px">
+                                <div class="div-label-span div-margin-bottom-5px">
+                                    <span>What is Q3?</span>
+                                </div>
+                                <div style="background-color:#fff;border:1px solid #ddd;overflow:auto;border-radius: 5px;">
+                                    <span id="div-icon" class="div-icon">
+                                    </span>
+                                    <input id="txtQ3" type="text" name="q1" data-id="3" class="txt" placeholder="Anwer three" autocomplete="off" oninput="ValidateTextMissing(this)" oninvalid="ValidateTextMissing(this)" required />
+                                    <span id="span-error-msgq3" class="span-error-msg"></span>
+                                    <span id="span-warning-msg" class="span-warning-msg"></span>
+                                </div>
+                            </div>
+                    <div class="div-margin-bottom-5px">
+                        <input id="btnFindAccount" type="submit" class="btnStyle btnWidth" value="Continue" name="email" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">	
+    <head>
+		<meta charset="UTF-8">
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- For Resposive Device -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="css/style1.css">
+        <script type="text/javascript" src="vendor/jquery.2.2.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/v.js"></script>
+    </head>
+    <body>
+        <div class="div-label-span div-margin-bottom-5px">
+            <h2>LogIn</h2>
+        </div>
+        <div id="form-container">
+            <form id="form-login" action="login.php" method="POST">
+                <div>
+                        <div class="div-margin-bottom-5px">
+                                <div class="div-label-span div-margin-bottom-5px">
+                                    <span>Email.</span>
+                                </div>
+                                <div style="background-color:#fff;border:1px solid #ddd;overflow:auto;border-radius: 5px;">
+                                    <span id="div-icon" class="glyphicon glyphicon-user div-icon">
+                                    </span>
+                                    <input id="txtEmail" type="Email" name="email" class="txt" placeholder="Email" autocomplete="off" oninput="Validate(this)" oninvalid="Validate(this)" required />
+                                    <span id="span-error-msg" class="span-error-msg"></span>
+                                    <span id="span-warning-msg" class="span-warning-msg"></span>
+                                </div>
+                            </div>
+                    <div class="div-margin-bottom-5px">
+                        <div class="div-label-span div-margin-bottom-5px">
+                            <span>Password.</span>
+                        </div>
+                        <div style="background-color:#fff;border:1px solid #ddd;overflow:auto;border-radius: 5px;">
+                            <span id="div-icon1" class="glyphicon glyphicon-lock div-icon">
+                            </span>
+                            <input id="txtPass" type="Password" name="password" data-id="1" pattern=".{6,}" class="txt" title="6 or more characyers" placeholder="Password" autocomplete="off" oninput="Validate0(this)" oninvalid="Validate0(this)" required />
+                            <span id="span-error-msgp1" class="span-error-msg"></span>
+                            <span id="span-warning-msgp1" class="span-warning-msg"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="div-margin-bottom-5px">
+                        <input id="btnFindAccount" type="submit" class="btnStyle btnWidth" value="Login" name="signin" />
+                    </div>
+                    <div style="margin:30px 0 25px 0;">
+                        <a href="findaccount.html" style="color:#777;">Forgot password?</a>
+                    </div>
+                    <div>
+                        <a href="register.html">I do not have an account.</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
