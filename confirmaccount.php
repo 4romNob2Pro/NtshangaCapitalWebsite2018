@@ -1,3 +1,21 @@
+<?php
+    Session_Start();
+    if(!isset($_SESSION['userconfirm'])){
+        header('Location: Login.html');
+    }
+    // include ('models/AccountUID.php');
+    // include ('models/DAL/Connection.php');
+    // include ('models/DAL/Command.php');
+    // include ('models/DAL/AccountDataMapper.php');
+    // include ('models/DAL/AccountUIDDataMapper.php');
+    
+    // $Comm = new Command();
+    // $Conn = new Connection();
+    // $acc_datamapper = new AccountDataMapper();
+    // $validate = new Validate();
+    // $accountUID = new AccountUID();
+    // $accUIDDataMapper = new AccountUIDDataMapper();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,22 +38,10 @@
                     <h2>Confirm your account</h2>
                 </div>
                 <div id="form-container">
-                    <form id="form-findaccount" action="createaccount.php" method="POST">
+                    <form id="form-findaccount" action="sendconfirmmail.php" method="POST">
                         <div>
                             <div class="div-margin-bottom-5px">
-                                <div class="div-label-span div-margin-bottom-5px">
-                                    <span>Email</span>
-                                </div>
-                                <div class="txtholder">
-                                    <span id="span-error-msg" class="span-error-msg"></span>
-                                    <span id="span-warning-msg" class="span-warning-msg"></span>
-                                    <span id="div-icon" class="glyphicon glyphicon-envelope div-icon">
-                                    </span>
-                                    <input id="txtEmail" type="Email" data-id="3" name="email" class="txt" placeholder="Email" autocomplete="off" oninput="Validate(this)" oninvalid="Validate(this)"  />
-                                </div>
-                            </div>
-                            <div class="div-margin-bottom-5px">
-                                <input id="btnCreateAccount" type="submit" class="btnStyle btnWidth" value="Sign Up" name="CreateAccount" />
+                                <input id="btnCreateAccount" type="submit" class="btnStyle btnWidth" value="Send email to confirm my account" name="ConfirmAccount" />
                             </div>
                         </div>
                     </form>
