@@ -1,0 +1,313 @@
+/* body{
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+#form-container{
+    background-color: #efefef;
+    border: 1px solid #ddd;
+    box-shadow:0px 1px 5px #ddd;
+    display: inline-block;
+    margin: 2% 0 0 0;
+    padding: 2%;
+    text-align: left;
+    width: 30%;
+}
+.div-label-span{
+    color: #333;
+    font-size:130%;
+}
+.div-margin-bottom-5px{
+    margin: 0 0 10px 0;
+}
+.txt{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: none;
+    color: #333;
+    outline: none;
+    padding: 3%;
+    width: 93%;
+    float: left;
+}
+.btnStyle{
+    background-color: rgb(75, 147, 241);
+    border:1px solid rgb(51, 131, 252);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 105%;
+    outline: none;
+    padding: 2%;
+}
+.span-error-msg{
+    background-color: red;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px maroon;
+    color: #fff;
+    display: none;
+    font-size: 90%;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: -2px;
+    min-height: 10px;
+    padding: 17px;
+    position: absolute;
+    
+}
+.span-arrow, .span-arrow0{
+    background-color: transparent;
+    border: 12px solid red;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    margin-left: -39px;
+    margin-top: -3px;
+    position: absolute;
+    width: 0;
+}
+.span-arrow0{
+    border-right-color: orange;
+}
+.span-warning-msg{
+    background-color: orange;
+    border-radius: 3px;
+    color: #000;
+    display: none;
+    font-size: 90%;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: -2px;
+    min-height: 10px;
+    padding: 17px;
+    position: absolute;
+}
+.btn-atag{
+    background-color: rgb(67, 114, 245);
+    color:#fff;
+    display: inline-block;
+    font-weight: bold;
+    padding: 1%;
+}
+.btn-atag:hover{
+    color:#eee;
+}
+.btn-atag:active{
+    color: red;
+}
+.try-different-link{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color:#333;
+}
+.div-icon{
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #bbb;
+    display: inline-block;
+    width: 6%;
+    padding: 3% 0
+}
+#no-access-to-my-e{
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 110%;
+    margin-top: 20px;
+    text-decoration: underline;    
+}
+.btnWidth{
+    width: 100%;
+} */
+
+
+body{
+    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+#form-container{
+    background-color: #efefef;
+    border: 1px solid #ddd;
+    box-shadow:0px 1px 5px #ddd;
+    display: inline-block;
+    margin: 2% 0 0 0;
+    padding: 2%;
+    text-align: left;
+    width: 30%;
+}
+.div-label-span{
+    color: #333;
+    font-size:130%;
+}
+.div-margin-bottom-5px{
+    margin: 0 0 10px 0;
+}
+.txt{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: none;
+    color: #333;
+    outline: none;
+    padding: 3%;
+    width: 93%;
+    float: left;
+}
+.btnStyle{
+    background-color: rgb(75, 147, 241);
+    border:1px solid rgb(51, 131, 252);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 130%;
+    outline: none;
+    padding: 2%;
+}
+.span-error-msg0 {
+    background-color: red;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px maroon;
+    color: #fff;
+    display: none;
+    font-size: 90%;
+    font-weight: bold;
+    margin-left: -22px;
+    margin-top: 65px;
+    min-height: 10px;
+    padding: 17px;
+    position: absolute;
+    z-index: 1;
+}
+
+.span-error-msg1 {
+    background-color: red;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px maroon;
+    color: #fff;
+    display: none;
+    font-size: 90%;
+    font-weight: bold;
+    margin-left: 48px;
+    margin-top: -2px;
+    min-height: 10px;
+    padding: 17px;
+    position: absolute;
+    z-index:1;
+}
+.span-error-msg{
+    background-color: red;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px maroon;
+    color: #fff;
+    display: none;
+    font-size: 90%;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-top: -2px;
+    min-height: 10px;
+    padding: 17px;
+    position: absolute;
+    
+}
+.span-arrow, .span-arrow0{
+    background-color: transparent;
+    border: 12px solid red;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    margin-left: -39px;
+    margin-top: -3px;
+    position: absolute;
+    width: 0;
+}
+.span-arrow0{
+    border-right-color: orange;
+}
+.span-error-msg0 .span-arrow {
+    border: 12px solid transparent;
+    border-bottom-color: transparent;
+    border-bottom-color: red;
+    margin: 0;
+    margin-top: 0px;
+    margin-top: -40px;
+}.span-warning-msg {
+    background-color: orange;
+    border-radius: 3px;
+    color: #000;
+    display: none;
+    font-size: 90%;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-top: -2px;
+    min-height: 10px;
+    padding: 17px;
+    position: absolute;
+}
+.btn-atag{
+    background-color: rgb(67, 114, 245);
+    color:#fff;
+    display: inline-block;
+    font-weight: bold;
+    padding: 1%;
+}
+.btn-atag:hover{
+    color:#eee;
+}
+.btn-atag:active{
+    color: red;
+}
+.try-different-link{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color:#333;
+}
+.div-icon{
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #bbb;
+    display: inline-block;
+    width: 6%;
+    padding: 3% 0
+}
+.div-icon0 {
+    padding:6% 0;
+}
+#no-access-to-my-e {
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 110%;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+.btnWidth{
+    width: 100%;
+}
+.div-fl-holder {
+    overflow:auto;
+}
+.divfname {
+    display: inline-block;
+    float: left;
+    margin-right:2%;
+    width: 48%;
+}
+.divlname{
+    display:inline-block;
+    float:left;
+    width:50%;
+}
+.txtholder {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-height:10px;
+    overflow: auto;
+    padding:1px 0;
+}
+.txtflname,.txtflname{
+    padding:6%;
+    width:87%;
+}

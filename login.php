@@ -1,4 +1,8 @@
 <?php
+Session_Start();
+if(isset($_SESSION['user'])){
+    header('Location: profile.php');
+}
 include ('models/DAL/Connection.php');
 include ('models/DAL/Command.php');
 include ('models/account.php');
@@ -42,8 +46,10 @@ if($msg != ''){
             // Check if is confirmed
             if(!$acc_datamapper->IsConfirmed($email, $Conn, $Comm))
             { 
+                $_SESSION['userid'] = $acc_datamapper->GetAccountId($email, $Conn, $Comm);
+                $_SESSION['userconfirm'] = $email;                
                 $msg = $msg.'confirm=Please confirm your account!';
-                header('Location: confirmaccount.html?'.$msg);
+                header('Location: confirmaccount.php?'.$msg);
             }
             else
             {
@@ -60,7 +66,8 @@ if($msg != ''){
                     { 
                         // TODO: Create Session for user
                         // TODO: Redirect to profile
-                        header('Location: profile.html');
+                        $_SESSION['user'] = $email;
+                        header('Location: profile.php');
                     }
                     else
                     {

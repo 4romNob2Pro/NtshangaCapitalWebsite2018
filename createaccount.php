@@ -11,11 +11,11 @@ include ('models/DAL/CustomerDataMapper.php');
 $validate = new Validate();
 //print_r($validate->LastNameMissing());
 
-$firstname = $validate->GetFirstName();
-$lastname = $validate->GetLastName();
-$email = $validate->GetEmail();
-$password = $validate->GetPassword();
-$repassword = $validate->GetRePassword();
+// $firstname = $validate->GetFirstName();
+// $lastname = $validate->GetLastName();
+// $email = $validate->GetEmail();
+// $password = $validate->GetPassword();
+// $repassword = $validate->GetRePassword();
 $msg = '';
 $createaccounturl = 'Location: createaccount.html';
 
@@ -40,6 +40,10 @@ if($validate->PasswordMissing()){
 if($validate->RePasswordMissing()){
     $msg = ($msg != '') ? $msg.'&&reps=Password is required' 
     : $msg.'reps=Password is required';
+}
+if($validate->GetPassword() != $validate->GetRePassword()){
+    $msg = ($msg != '') ? $msg.'&&reps=Password do not match' 
+    : $msg.'reps=Password do not match';
 }
 if($msg != ''){
     header($createaccounturl.'?'.$msg);
