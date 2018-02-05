@@ -26,7 +26,7 @@ else{
         $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
         $mail->Username = 'mtsatse.sibulele@gmail.com';                 // SMTP username
-        $mail->Password = '42009400';
+        $mail->Password = '';
         $mail->smtpConnect(
             array(
                 "ssl" => array(
