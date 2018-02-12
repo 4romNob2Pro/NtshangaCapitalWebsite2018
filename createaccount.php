@@ -1,3 +1,15 @@
+
+<?php
+// Inistialise Session
+Session_Start();
+?>
+
+<?php
+// Check if user is loggedin
+if(isset($_SESSION['user'])){
+    header('Location: profile.php');
+}
+?>
 <?php
 include ('models/DAL/Connection.php');
 include ('models/DAL/Command.php');
@@ -9,13 +21,6 @@ include ('models/DAL/CustomerDataMapper.php');
 // TODO: send confirmation email
 
 $validate = new Validate();
-//print_r($validate->LastNameMissing());
-
-// $firstname = $validate->GetFirstName();
-// $lastname = $validate->GetLastName();
-// $email = $validate->GetEmail();
-// $password = $validate->GetPassword();
-// $repassword = $validate->GetRePassword();
 $msg = '';
 $createaccounturl = 'Location: createaccount.html';
 
@@ -67,10 +72,10 @@ else{
         $acc_datamapper = new AccountDataMapper();
                     
         if($password != $repassword){
-            //header($createaccounturl);
+            header($createaccounturl.'?msg=Passwords do not match');
         }
         if($acc_datamapper->Exist($email, $Conn, $Comm)){
-            //header('Location: createaccount.html');
+            header('Location: createaccount.html?msg=Account exists');
         }
         $account = new account(0, $IsConfirmed, $IsLocked, $AccountType, $DateNow, $email, $password);
         $acc_id = $acc_datamapper->Save($account, $Conn, $Comm);
@@ -80,11 +85,11 @@ else{
             $customer = new Customer(0, $acc_id, $firstname, $lastname, null, null, $email);
             $customer_datamapper = new CustomerDataMapper();
             $customer_id = $customer_datamapper->Save($customer, $Conn, $Comm);
-            if($customer_id > 0){
-                header('Location: profile.html');
-            }else{
-                header('Location: editprofile.html');
-            }
+
+            $_SESSION['userid'] = $acc_id;
+            $_SESSION['userconfirm'] = $email;
+            $msg = $msg.'confirm=Please confirm your account!';
+            header('Location: confirmaccount.php?'.$msg);
         }else{
             header('Location: createaccount.html?msg=error');
         }
